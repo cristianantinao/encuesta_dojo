@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Encuesta Dojo</title>
+</head>
+
+<body>
+    <h1>Encuesta Dojo</h1>
+    <div class="container">
+
+        <form action='/porcesar/result' method="post">
+            <div class="nombre">
+                <label for="firstName">Nombre:</label>
+                <input type="text" class="form-control" name="first_name" id="nombre">
+            </div>
+            <div class="apellido">
+                <label for="lastName">Apellido:</label>
+                <input type="text" class="form-control" name="last_name" id="nombre">
+            </div>
+            <div class="lenguaje">
+                <label for="lenfav">Lenguaje Favorito:</label>
+                <select name='lenfav' class='lenguajes'>
+                    <option value='Pyhton'>Pyhton</option>
+                    <option value='JavaScript'>JavaScript</option>
+                    <option value='C#'>C#</option>
+                    <option value='Java'>Java</option>
+                </select>
+            </div>
+            <div class="dojo">
+                <label for="dojolocation">Ubicacion Dojo:</label>
+                <select name='dojolocation' class="dojos">
+                    <option value='Santiago'>Santiago</option>
+                    <option value='Concepcion'>Concepcion</option>
+                    <option value='Rancagua'>Rancagua</option>
+                    <option value='Iquique'>Iquique</option>
+                </select>
+            </div>
+            <div class="inputarea">
+                <label for="coments">Comentarios:</label>
+                <textarea name="coments" id="" cols="40" rows="10"></textarea>
+            </div>
+            <div class="boton">
+                <button>Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
